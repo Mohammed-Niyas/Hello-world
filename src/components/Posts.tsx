@@ -34,19 +34,14 @@ const Posts = () => {
     <div>
       <h3 className="text-white">Posts</h3>
       <ul>
-        {
-          posts?.map((post) => (
-            <>
-            <li key={post.id}>
-              {post.title}
-            </li>
-              <li>
-                {post?.body}
-              </li>
-              </>
-          ))
-        }
-
+        {posts?.map((post) => (
+          <li key={post.id}>
+            <div>
+              <h4>{post.title}</h4>
+              <p>{post.body}</p>
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   )
